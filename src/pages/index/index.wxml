@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="list-desc">1.在data设置简单数据，DOM简单</view>
+    <view class="btn-list">
+        <button wx:for="{{dataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
+            {{item.name}}
+        </button>
+    </view>
+    <view class="list-desc">2.在data设置复杂数据，DOM简单</view>
+    <view class="btn-list">
+        <button wx:for="{{complexDataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
+            {{item.name}}
+        </button>
+    </view>
+    <view class="list-desc">3.在data设置复杂数据，DOM简单, 然后setData同样数据</view>
+    <view class="btn-list">
+        <button wx:for="{{complexDataSetDataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
+            {{item.name}}
+        </button>
+    </view>
+</view>

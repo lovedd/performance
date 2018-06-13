@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/data_0/list",
+    "pages/data_1/list",
+    "pages/data_10/list",
+    "pages/data_100/list",
+    "pages/data_200/list",
+    "pages/data_400/list",
+    "pages/data_1000/list",
+    "pages/data_complex_1000/list",
+    "pages/data_set_data_complex_1000/list"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

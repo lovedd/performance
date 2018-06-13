@@ -1,0 +1,14 @@
+*.sublime-workspace
+.idea/
+.DS_Store
+node_modules
+logs/
+.eslintcache
+*.rb
+*.sh
+npm-debug.log
+build
+dist
+package-lock.json
+src/project\.config\.json
+project\.config\.json

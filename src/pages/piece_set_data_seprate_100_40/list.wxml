@@ -1,0 +1,10 @@
+<!--nest_list.wxml-->
+<view class="container list">
+  <view>load: {{onLoadTime}}</view>
+  <view>show: {{onShowTime}}</view>
+  <view>ready: {{onReadyTime}}</view>
+  <view>firstRenderTime: {{firstRenderTime}}</view>
+  <block wx:for="{{list}}" wx:for-item="item">
+    <text class="item">{{index + 1}}. {{item.name}}</text>
+  </block>
+</view>
