@@ -1,0 +1,38 @@
+<!--nest_list.wxml-->
+<view class="list">
+  <view class="btn-wrap">
+    <button class="btn-item" bindtap="clearData">
+      清空
+    </button>
+    <button class="btn-item" bindtap="changeData">
+      直接改变
+    </button>
+    <button class="btn-item" bindtap="clearAndChangeData">
+      setData清空并立即改变
+    </button>
+    <button class="btn-item" bindtap="clearSimpleAndChangeData">
+      赋值清空并立即改变
+    </button>
+    <button class="btn-item" bindtap="reverseData">
+      置反
+    </button>
+  </view>
+  <view>清空耗时: {{clearSpendTime}}</view>
+  <view>清空阻塞时间: {{clearBlockTime}}</view>
+  <view>直接改变耗时: {{changeSpendTime}}</view>
+  <view>直接改变阻塞时间: {{changeBlockTime}}</view>
+  <view>setData清空并立即改变耗时: {{clearAndChangeSpendTime}}</view>
+  <view>setData清空并立即改变阻塞时间: {{clearAndChangeBlockTime}}</view>
+  <view>赋值清空并立即改变耗时: {{clearSimpleAndChangeSpendTime}}</view>
+  <view>赋值清空并立即改变阻塞时间: {{clearSimpleAndChangeBlockTime}}</view>
+  <view>置反耗时: {{reverseSpendTime}}</view>
+  <view>置反阻塞时间: {{reverseBlockTime}}</view>
+  <block wx:for="{{list}}" wx:for-item="item">
+    <scroll-view scroll-x="true">
+      <view class="item">{{index + 1}}. {{item.name}}</view>
+      <view class="item">{{index + 1}}. {{item.name0}}</view>
+      <view class="item">{{index + 1}}. {{item.name1}}</view>
+      <view class="item">{{index + 1}}. {{item.name2}}</view>
+    </scroll-view>
+  </block>
+</view>

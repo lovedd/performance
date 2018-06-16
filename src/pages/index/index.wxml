@@ -6,15 +6,21 @@
             {{item.name}}
         </button>
     </view>
-    <view class="list-desc">2.在data设置复杂数据，DOM简单</view>
+    <view class="list-desc">2.setData分段渲染数据，DOM简单</view>
     <view class="btn-list">
-        <button wx:for="{{complexDataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
+        <button wx:for="{{pieceDataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
             {{item.name}}
         </button>
     </view>
     <view class="list-desc">3.在data设置复杂数据，DOM简单, 然后setData同样数据</view>
     <view class="btn-list">
         <button wx:for="{{complexDataSetDataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
+            {{item.name}}
+        </button>
+    </view>
+    <view class="list-desc">4.在setdata修改数据，DOM简单</view>
+    <view class="btn-list">
+        <button wx:for="{{changeSetDataList}}" bindtap="toPage" class="list-item" data-url="{{item.url}}">
             {{item.name}}
         </button>
     </view>

@@ -1,0 +1,11 @@
+.list {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*padding: 40rpx;*/
+  /*align-items: center;*/
+  white-space: nowrap;
+}
+.item {
+  display: inline-block;
+  margin: 10rpx;
+}
