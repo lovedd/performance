@@ -19,19 +19,34 @@
     <button class="btn-item" bindtap="reverseData">
       置反
     </button>
+    <button class="btn-item" bindtap="setOtherData">
+      无关数据
+    </button>
+    <button class="btn-item" bindtap="addOneData">
+      加1组数据
+    </button>
+    <button class="btn-item" bindtap="hideAndShow">
+      隐藏/出现
+    </button>
   </view>
   <view>清空耗时: {{clearSpendTime}}</view>
-  <!--<view>清空阻塞时间: {{clearBlockTime}}</view>-->
+  <view>清空阻塞时间: {{clearBlockTime}}</view>
   <view>直接改变耗时: {{changeSpendTime}}</view>
-  <!--<view>直接改变阻塞时间: {{changeBlockTime}}</view>-->
+  <view>直接改变阻塞时间: {{changeBlockTime}}</view>
   <view>setData清空并立即改变耗时: {{clearAndChangeSpendTime}}</view>
-  <!--<view>setData清空并立即改变阻塞时间: {{clearAndChangeBlockTime}}</view>-->
+  <view>setData清空并立即改变阻塞时间: {{clearAndChangeBlockTime}}</view>
   <view>赋值清空并立即改变耗时: {{clearSimpleAndChangeSpendTime}}</view>
-  <!--<view>赋值清空并立即改变阻塞时间: {{clearSimpleAndChangeBlockTime}}</view>-->
+  <view>赋值清空并立即改变阻塞时间: {{clearSimpleAndChangeBlockTime}}</view>
   <view>隐藏并立即改变耗时: {{hiddenAndChangeSpendTime}}</view>
-  <!--<view>隐藏并立即改变阻塞时间: {{clearAndChangeBlockTime}}</view>-->
+  <view>隐藏并立即改变阻塞时间: {{hiddenAndChangeBlockTime}}</view>
   <view>置反耗时: {{reverseSpendTime}}</view>
-  <!--<view>置反阻塞时间: {{reverseBlockTime}}</view>-->
+  <view>置反阻塞时间: {{reverseBlockTime}}</view>
+  <view>设置无关数据耗时: {{setOtherDataSpendTime}}</view>
+  <view>设置无关数据阻塞时间: {{setOtherDataBlockTime}}</view>
+  <view>加1组数据耗时: {{addOneSpendTime}}</view>
+  <view>加1组数据阻塞时间: {{addOneBlockTime}}</view>
+  <view>加1组数据耗时: {{hideAndShowSpendTime}}</view>
+  <view>加1组数据阻塞时间: {{hideAndShowBlockTime}}</view>
   <block wx:for="{{list}}" wx:for-item="item" wx:key="{{item.name}}">
     <scroll-view scroll-x="true" hidden="{{hideList}}">
       <view class="item">{{index + 1}}. {{item.name}}</view>

@@ -13,6 +13,9 @@
     <button class="btn-item" bindtap="clearSimpleAndChangeData">
       赋值清空并立即改变
     </button>
+    <button class="btn-item" bindtap="hiddenAndChangeData">
+      隐藏并立即改变
+    </button>
     <button class="btn-item" bindtap="reverseData">
       置反
     </button>
@@ -25,10 +28,12 @@
   <view>setData清空并立即改变阻塞时间: {{clearAndChangeBlockTime}}</view>
   <view>赋值清空并立即改变耗时: {{clearSimpleAndChangeSpendTime}}</view>
   <view>赋值清空并立即改变阻塞时间: {{clearSimpleAndChangeBlockTime}}</view>
-  <view>置反耗时: {{reverseSpendTime}}</view>
-  <view>置反阻塞时间: {{reverseBlockTime}}</view>
+  <view>隐藏并立即改变耗时: {{hiddenAndChangeSpendTime}}</view>
+  <view>隐藏并立即改变阻塞时间: {{hiddenAndChangeBlockTime}}</view>
+  <view>置反耗时: {{setOtherDataSpendTime}}</view>
+  <view>置反阻塞时间: {{setOtherDataBlockTime}}</view>
   <block wx:for="{{list}}" wx:for-item="item">
-    <scroll-view scroll-x="true">
+    <scroll-view scroll-x="true" hidden="{{hideList}}">
       <view class="item">{{index + 1}}. {{item.name}}</view>
       <view class="item">{{index + 1}}. {{item.name0}}</view>
       <view class="item">{{index + 1}}. {{item.name1}}</view>

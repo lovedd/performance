@@ -43,6 +43,40 @@ Page({
         });
         console.log('changeBlockTime: '+ this.reverseBlockTime);
     },
+    setOtherData() {
+        this.tapSetOtherDataBtnTime = new Date().getTime();
+        this.setData({
+            list2: listData
+        }, () => {
+            this.setOtherDataSpendTime = new Date().getTime() - this.tapSetOtherDataBtnTime;
+            console.log('setOtherDataSpendTime: '+ this.setOtherDataSpendTime);
+            this.setData({
+                setOtherDataSpendTime: this.setOtherDataSpendTime
+            })
+        });
+        this.setOtherDataBlockTime = new Date().getTime() - this.tapSetOtherDataBtnTime;
+        this.setData({
+            setOtherDataBlockTime: this.setOtherDataBlockTime
+        });
+        console.log('setOtherDataBlockTime: '+ this.setOtherDataBlockTime);
+    },
+    addOneData() {
+        this.tapAddOneBtnTime = new Date().getTime();
+        this.setData({
+            list: listData.concat({"name":"name0401","name0":"name0401","name1":"name0401","name2":"name0401","name3":"name0401","name4":"name0401","name5":"name0401","name6":"name0401","name7":"name0401","name8":"name0401","name9":"name0401"})
+        }, () => {
+            this.addOneSpendTime = new Date().getTime() - this.tapAddOneBtnTime;
+            console.log('addOneSpendTime: '+ this.addOneSpendTime);
+            this.setData({
+                addOneSpendTime: this.addOneSpendTime
+            })
+        });
+        this.addOneBlockTime = new Date().getTime() - this.tapAddOneBtnTime;
+        this.setData({
+            addOneBlockTime: this.addOneBlockTime
+        });
+        console.log('addOneBlockTime: '+ this.addOneBlockTime);
+    },
     clearAndChangeData() {
         this.tapClearAndChangeDataBtnTime = new Date().getTime();
         this.setData({
@@ -62,6 +96,23 @@ Page({
             clearAndChangeBlockTime: this.clearAndChangeBlockTime
         });
         console.log('clearAndChangeBlockTime: '+ this.clearAndChangeBlockTime);
+    },
+    hideAndShow() {
+        this.tapHideAndShowBtnTime = new Date().getTime();
+        this.setData({
+            hideList: !this.data.hideList
+        }, () => {
+            this.hideAndShowSpendTime = new Date().getTime() - this.tapHideAndShowBtnTime;
+            console.log('hideAndShowSpendTime: '+ this.hideAndShowSpendTime);
+            this.setData({
+                hideAndShowSpendTime: this.hideAndShowSpendTime
+            })
+        });
+        this.hideAndShowBlockTime = new Date().getTime() - this.tapHideAndShowBtnTime;
+        this.setData({
+            hideAndShowBlockTime: this.hideAndShowBlockTime
+        });
+        console.log('hiddenAndChangeBlockTime: '+ this.hideAndShowBlockTime);
     },
     hiddenAndChangeData() {
         this.tapHiddenAndChangeDataBtnTime = new Date().getTime();

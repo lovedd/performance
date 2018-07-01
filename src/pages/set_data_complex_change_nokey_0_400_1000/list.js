@@ -63,6 +63,27 @@ Page({
         });
         console.log('clearAndChangeBlockTime: '+ this.clearAndChangeBlockTime);
     },
+    hiddenAndChangeData() {
+        this.tapHiddenAndChangeDataBtnTime = new Date().getTime();
+        this.setData({
+            hideList: true,
+        });
+        this.setData({
+            hideList: false,
+            list: listData
+        }, () => {
+            this.hiddenAndChangeSpendTime = new Date().getTime() - this.tapHiddenAndChangeDataBtnTime;
+            console.log('hiddenAndChangeSpendTime: '+ this.hiddenAndChangeSpendTime);
+            this.setData({
+                hiddenAndChangeSpendTime: this.hiddenAndChangeSpendTime
+            })
+        });
+        this.hiddenAndChangeBlockTime = new Date().getTime() - this.tapHiddenAndChangeDataBtnTime;
+        this.setData({
+            hiddenAndChangeBlockTime: this.hiddenAndChangeBlockTime
+        });
+        console.log('hiddenAndChangeBlockTime: '+ this.hiddenAndChangeBlockTime);
+    },
     clearSimpleAndChangeData() {
         this.tapClearSimpleAndChangeDataBtnTime = new Date().getTime();
         this.data.list = [];
